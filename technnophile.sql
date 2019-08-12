@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2018 at 08:20 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Aug 12, 2019 at 06:39 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -52,6 +54,32 @@ INSERT INTO `boardgames` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `camera`
+--
+
+CREATE TABLE `camera` (
+  `Pid` int(5) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Quantity` int(2) NOT NULL,
+  `Perday` int(5) NOT NULL,
+  `Deposit` int(5) NOT NULL,
+  `Mrp` int(5) NOT NULL,
+  `DaysOption` date NOT NULL,
+  `Demo` varchar(5) NOT NULL,
+  `Image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `camera`
+--
+
+INSERT INTO `camera` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
+(31, 'Nikon DSLR', 3, 2000, 10000, 40000, '0000-00-00', 'yes', 'https://www.backscatter.com/ITEM_IMAGES/nkl-1513_1.jpg?resizeid=6&resizeh=600&resizew=600'),
+(32, 'Canon DSLR', 2, 2300, 10000, 50000, '0000-00-00', 'yes', 'https://johnlewis.scene7.com/is/image/JohnLewis/237415930?$rsp-pdp-port-1440$');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cart`
 --
 
@@ -64,6 +92,18 @@ CREATE TABLE `cart` (
   `Image` varchar(70) NOT NULL,
   `Maxquantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`Email`, `Pid`, `Quantity`, `Name`, `Perday`, `Image`, `Maxquantity`) VALUES
+('j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '../html1/img/technophilerentalimages/punk.jpg', 2),
+('j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '../html1/img/technophilerentalimages/hover.jpg', 2),
+('j@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('jigar@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('jigar@gmail.com', 15, 1, 'Beats By Dr.Dre Mixr Headphone\r\n', 600, '../html1/img/technophilerentalimages/beats mixr.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -106,22 +146,24 @@ INSERT INTO `description` (`pid`, `description`) VALUES
 (7, 'Our most luxurious headphones – H9i combine ANC, wireless, an innovative aluminium touch interface and Bang & Olufsen Signature Sound\r\n	Advanced Active Noise Cancellation\r\n	Transparency Mode\r\n'),
 (15, 'Beats mixr headphones are built to withstand the rigors of DJ life, which means creating a housing flexible and tough enough to take a beating. The ultra-flexible headband was also crafted to be super lightweight and easily foldable for jetting off to your next destination'),
 (16, 'a speaker that can go anywhere! Splashproof and extra rugged the Flasko is perfect for camping, hiking, gardens, music festivals and for kids prone to breaking things! Not only can Flasko withstand the rain and any knocks and bumps that may come its way, it packs a serious punch sound wise with a crisp base sound. Equipped with a carry clip and bottle opener, the Flasko is designed for those that love to be outdoors, making it the perfect companion to enhance your music sharing moments.'),
-(17, 'The BoomBox is a legendary piece of music history that made portable sound a part of urban lifestyle. It took music to the streets and helped shape hip hop as we know it today. The Monster Blaster celebrates the classic BoomBox with a modern design and the latest in wireless technology. With deep pounding bass, the Monster Blaster has the power to bring music to life indoors and out. You''ve never heard anything like this before, but don''t take our word for it....Because the Music Matters.'),
+(17, 'The BoomBox is a legendary piece of music history that made portable sound a part of urban lifestyle. It took music to the streets and helped shape hip hop as we know it today. The Monster Blaster celebrates the classic BoomBox with a modern design and the latest in wireless technology. With deep pounding bass, the Monster Blaster has the power to bring music to life indoors and out. You\'ve never heard anything like this before, but don\'t take our word for it....Because the Music Matters.'),
 (9, 'hoverboard two-wheel self balancing electric scooter is UL 2272 Certified\r\nA POWERFUL RIDE - Cruising speed of 7.5+mph with 2 powerful 250 Watt motors offering you a wonderful riding experience\r\nEquipped with a 25.2V / 4A battery you can hit max speed of up to 7.5 MPH\r\n6.5 inch tires, east to control and ride'),
-(10, 'BLUETOOTH ENABLED -Change modes, access map function, check batteries & play music during rides via the app & speakers\r\nPOWERFUL PERFORMANCE -Race up to 7.5 mph and climb inclines of up to 30 Degree with the electric smart hoverboard''s 150W dual motors\r\nFOR ALL RIDERS -Using 3 modes, this sport hoverboard travels up to 8 miles per charge & carries riders between 44 -220 lbs\r\nTACKLES ALL ADVENTURES -UL-approved materials & 6.5" hard rubber tires deliver increased durability and ensure smooth ride'),
-(11, 'umping Sumo, More than a drone – a connected robot Quick, sturdy and agile, the Jumping Sumo transforms your environment into a giant playground. With it, everything becomes an excuse for stories and adventures. Chases, slaloms, acrobatics, obstacle jumps, photos or videos – you''ve got plenty of choices! What''s more, with its on-board camera, you can follow it as if you were there. Experience the amazing sensations in real time! SPEED: 7 km/h JUMPS: up to 80 cm STABILISATION: 360° VIDEO: Wide angle camera Marvel at its acrobatics With its ability to take sudden 90° and 180° turns, your Parrot Jumping Sumo can radically change direction! Whatever you subject it to, the Jumping Sumo retains excellent grip and road-holding. It''s easy – control it with your fingertips '),
-(18, ' Jumping Night MiniDrone from Parrot! Agile and lightweight, it leaps and dashes through the dark with an embedded VGA (480X640) mini camera that sends photos and videos directly to your smartphone or tablet. Program sound and light choreography to create a show for your friends and family. Download the Freeflight 3 app to live stream your video experience on your smartphone or tablet''s piloting screen. Spin, jump, rock and roll Your MiniDrone offers three modes to help you customize your adventure. In Jumper Mode, it leaps up to 2.5 feet and still lands wheels first. In Kicker Mode, your MiniDrone uses springs to push objects out of its path. In Auto-Balance Mode, your MiniDrone remains perfectly balanced on both wheels.'),
+(10, 'BLUETOOTH ENABLED -Change modes, access map function, check batteries & play music during rides via the app & speakers\r\nPOWERFUL PERFORMANCE -Race up to 7.5 mph and climb inclines of up to 30 Degree with the electric smart hoverboard\'s 150W dual motors\r\nFOR ALL RIDERS -Using 3 modes, this sport hoverboard travels up to 8 miles per charge & carries riders between 44 -220 lbs\r\nTACKLES ALL ADVENTURES -UL-approved materials & 6.5\" hard rubber tires deliver increased durability and ensure smooth ride'),
+(11, 'umping Sumo, More than a drone – a connected robot Quick, sturdy and agile, the Jumping Sumo transforms your environment into a giant playground. With it, everything becomes an excuse for stories and adventures. Chases, slaloms, acrobatics, obstacle jumps, photos or videos – you\'ve got plenty of choices! What\'s more, with its on-board camera, you can follow it as if you were there. Experience the amazing sensations in real time! SPEED: 7 km/h JUMPS: up to 80 cm STABILISATION: 360° VIDEO: Wide angle camera Marvel at its acrobatics With its ability to take sudden 90° and 180° turns, your Parrot Jumping Sumo can radically change direction! Whatever you subject it to, the Jumping Sumo retains excellent grip and road-holding. It\'s easy – control it with your fingertips '),
+(18, ' Jumping Night MiniDrone from Parrot! Agile and lightweight, it leaps and dashes through the dark with an embedded VGA (480X640) mini camera that sends photos and videos directly to your smartphone or tablet. Program sound and light choreography to create a show for your friends and family. Download the Freeflight 3 app to live stream your video experience on your smartphone or tablet\'s piloting screen. Spin, jump, rock and roll Your MiniDrone offers three modes to help you customize your adventure. In Jumper Mode, it leaps up to 2.5 feet and still lands wheels first. In Kicker Mode, your MiniDrone uses springs to push objects out of its path. In Auto-Balance Mode, your MiniDrone remains perfectly balanced on both wheels.'),
 (12, 'The Game of Life by Funskool India Ltd. is a fun game of choice and chance. Spinning the wheel of fortune gives a chance to experience the entire course of life, from education to retirement. It is a great way to instill good values in children and teach them about helping others, getting educated, making career choices, the importance of insurance and money management. The game also throws some light on the stock market, which is a good way to introduce children to making investments and calculating risks. The Game of Life is one of those board games for kids that will instill a winning spirit within each player. Introducing this game at the right age can help in shaping young minds, making them more focused in life.'),
 (13, 'Have a blast playing the  Taboo board game. Suitable for teens and adults, Taboo is a fun guessing game based on clues. The team must guess the secret word on the card with clues given by a teammate. Beware, the forbidden words must not be used as clues or the opposing team will gain points. To add to the fun, the opposite team also gets to press the signature squeaker for each mistake made. Easy to learn, this game provides loads of entertainment with friends and family. Break the ice at picnics with this fun-filled game that will surely tickle your funny bone.\r\n\r\nFeatures/Specifications'),
 (14, 'Squap Resembles The Catch Ball Game\r\n\r\nThe squap toy is designed taking an inspiration from the traditional way of playing a catch ball game.\r\n\r\nIncludes Behind The Back Shot, Over The Shoulder Shot, Turn Around And Jump Shot	'),
 (19, 'Mattel UNO Spin'),
-(20, 'Monopoly is the world''s favorite family brand. The classic, fast-dealing property trading game welcomes the Cat into its family of tokens. After an online vote, fans around the globe decided the Cat would be the purr-fect addition to the Monopoly game. Put your token on the Go space and roll the dice to own it all in the fast-paced world of real estate. Make a move, make a deal and make a fortune to win it all. There can be only one winner in the Monopoly game; will it be you?.'),
-(25, 'Powered by Frostbite, EA Sports FIFA 18 blurs the line between the virtual and real worlds, bringing to life the heroes, teams and atmospheres of the world''s game.'),
-(26, 'Uncharted 4: A Thief''s End\r\nSeveral years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves.|With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure.\r\nHis greatest adventure will test his physical limits, his resolve, and ultimately what he''s willing to sacrifice to save the ones he loves.\r\n\r\n\r\n'),
+(20, 'Monopoly is the world\'s favorite family brand. The classic, fast-dealing property trading game welcomes the Cat into its family of tokens. After an online vote, fans around the globe decided the Cat would be the purr-fect addition to the Monopoly game. Put your token on the Go space and roll the dice to own it all in the fast-paced world of real estate. Make a move, make a deal and make a fortune to win it all. There can be only one winner in the Monopoly game; will it be you?.'),
+(25, 'Powered by Frostbite, EA Sports FIFA 18 blurs the line between the virtual and real worlds, bringing to life the heroes, teams and atmospheres of the world\'s game.'),
+(26, 'Uncharted 4: A Thief\'s End\r\nSeveral years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves.|With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure.\r\nHis greatest adventure will test his physical limits, his resolve, and ultimately what he\'s willing to sacrifice to save the ones he loves.\r\n\r\n\r\n'),
 (21, 'How about a surprise Karaoke evening with friends? Too lazy to head out? Well, Karaoke Magic Sing ET- 25 K is the key solution. All you need is a TV to connect to and you are good to go for a musical evening.This Karaoke microphone has all the controls of volume, echo, tempo and even the countdown timer, so just sit, dance, stand, run and JUST sing. This microphone is very easy to set up .This Magic device comes with 3806 inbuilt songs with a collection of 1509 Hindi + 2001 English +198 Marathi and 98 Punjabi songs. Have a party with cultural diversity and just create the sense of unity amongst your friends. The songs are easy to read and You can search the songs on screen or refer to the hand book in which the songs are arranged in an alphabetical order. This was for the music lovers.'),
-(22, 'What''s new in "Symphony" - 1st time in India Android karaoke player. Make your phone the remote of system. Recorded files can be directly extracted to mobile. Lightweight to use and easy to carry. Connect webcam and see yourself while singing. e-Manual to save paper features 2.4GHz wireless microphone i-Fun Android karaoke player. Works direct with your TV and can be connected through Wi-Fi. HDMI output. Can install application from play store. Pen drive can be attached for playing video/audio/image in your TV. 16GB in built memory. Track pad on the microphone to navigate through the system song reserves song favorite up to 150 songs. Song recording up to 150 songs. Select song list by alphabet, word or singer.'),
+(22, 'What\'s new in \"Symphony\" - 1st time in India Android karaoke player. Make your phone the remote of system. Recorded files can be directly extracted to mobile. Lightweight to use and easy to carry. Connect webcam and see yourself while singing. e-Manual to save paper features 2.4GHz wireless microphone i-Fun Android karaoke player. Works direct with your TV and can be connected through Wi-Fi. HDMI output. Can install application from play store. Pen drive can be attached for playing video/audio/image in your TV. 16GB in built memory. Track pad on the microphone to navigate through the system song reserves song favorite up to 150 songs. Song recording up to 150 songs. Select song list by alphabet, word or singer.'),
 (23, 'The BBZ252 Bluetooth RC Car can be controlled directly from your iPhone or iPad using the specific BeeWi Control Pad application available on iTunes. The Bluetooth RC car works as a regular RC Car with forward/backward direction and left/right steering. The application provided allows for both touch screen and motion control, offering a richer and more user friendly experience. The BBZ252 RC Car is Bluetooth 2.1 compliant and it is compatible with all Bluetooth compliant iOS devices using Wireless iAp proto'),
-(24, 'Did you miss a chance to own one of the limited production Ford GT racing machines when they launched in 2005? Here''s an opportunity to own the same gorgeous car, in a beautiful red, in a much smaller scale. This remote control car is manufactured in a 1:18 scale and is an accurate replica of the real deal. Impress your friends and have hours of fun racing at a fraction of the cost of the real car. It operates with 4 AA batteries for the car and one 9V battery for the remote control, not included. Model is 10 inches long by 4 inches wide, 2 inches high. For ages 8 and up, adult supervision required. Product color may vary.');
+(24, 'Did you miss a chance to own one of the limited production Ford GT racing machines when they launched in 2005? Here\'s an opportunity to own the same gorgeous car, in a beautiful red, in a much smaller scale. This remote control car is manufactured in a 1:18 scale and is an accurate replica of the real deal. Impress your friends and have hours of fun racing at a fraction of the cost of the real car. It operates with 4 AA batteries for the car and one 9V battery for the remote control, not included. Model is 10 inches long by 4 inches wide, 2 inches high. For ages 8 and up, adult supervision required. Product color may vary.'),
+(31, 'Nikon D5600 DSLR Camera Body with Dual Lens: AF-P DX Nikkor 18 - 55 MM F/3.5-5.6G VR and 70-300 MM F/4.5-6.3G ED VR (16 GB SD Card)  (Black)'),
+(32, 'Canon EOS 200D DSLR Camera Body with Dual Lens: EF-S18-55 IS STM + EF-S 55-250 IS STM (16 GB SD Card + Camera Bag)  (Black)');
 
 -- --------------------------------------------------------
 
@@ -195,7 +237,10 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`email`, `password`) VALUES
-('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592');
+('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592'),
+('j@gmail.com', 'd4a23b0584a5d286fe25ed6b3afb20ef'),
+('jigar@gmail', 'd77621addded6beeca5ab84bd0eef224'),
+('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224');
 
 -- --------------------------------------------------------
 
@@ -247,7 +292,12 @@ CREATE TABLE `procorder` (
 --
 
 INSERT INTO `procorder` (`fname`, `lname`, `address`, `phone`, `email`, `pid`, `quantityod`, `name`, `perday`, `date`) VALUES
-('Priyam', 'Vora', '2/21 shaparia bldg', 9029287010, 'priyamvora99@gmail.com', 21, 1, 'Karaoke Magic Sing ET-25 K\r\n', 1500, '13/04/2018');
+('Priyam', 'Vora', '2/21 shaparia bldg', 9029287010, 'priyamvora99@gmail.com', 21, 1, 'Karaoke Magic Sing ET-25 K\r\n', 1500, '13/04/2018'),
+('Jigar', 'Avalani', 'jadwvdevfev', 45974556454, 'j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '31/07/2019'),
+('Jigar', 'Avalani', 'jadwvdevfev', 45974556454, 'j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '31/07/2019');
 
 -- --------------------------------------------------------
 
@@ -353,7 +403,10 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`email`, `password`, `name`, `address`, `phone`, `lname`) VALUES
-('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592', 'Priyam', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9029287010, 'Vora');
+('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592', 'Priyam', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9029287010, 'Vora'),
+('j@gmail.com', 'd4a23b0584a5d286fe25ed6b3afb20ef', 'Jigar', 'jabxjsbcfjw', 1425638789, 'Avalani'),
+('jigar@gmail', 'd77621addded6beeca5ab84bd0eef224', 'jigar', 'ajsvdwhvd', 9865214635, 'avalani'),
+('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224', 'Jigar ', 'fwyfdywgfuw wjwfuwgfuw jfeiufvguwvf uwgfugf', 98745632145, 'Avalani');
 
 -- --------------------------------------------------------
 
@@ -416,6 +469,7 @@ INSERT INTO `terms` (`OrderDate`, `Refund`, `Damage`) VALUES
 --
 ALTER TABLE `product_catalogue`
   ADD PRIMARY KEY (`Pid`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

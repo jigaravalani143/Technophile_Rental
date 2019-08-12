@@ -1,5 +1,5 @@
 <?php
-  
+
   session_start();
   if(!isset($_SESSION["user"])){
     header('Location:signup.php');
@@ -59,7 +59,7 @@
                   <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
                 </ul>
                 <div class="login"><a href="#" data-toggle="modal" data-target="#login-modal" class="login-btn"><i class="fa fa-sign-in"></i><span class="d-none d-md-inline-block">Sign In</span></a><a href="signup.php" class="signup-btn"><i class="fa fa-user"></i><span class="d-none d-md-inline-block">Sign Up</span></a></div>
-                
+
               </div>
             </div>
             <div class="col-md-5">
@@ -71,9 +71,9 @@
                   echo "<div class='d-flex justify-content-md-end justify-content-between'>Hello user </div>";
                 }
               ?>
-              
+
             </div>
-            
+
               <div class="col-md-2">
                 <div class="d-flex justify-content-md-end justify-content-between">
                   <a href="logout.php" style="text-decoration:none;color:white;">Logout</a>
@@ -83,20 +83,20 @@
                 <div class="d-flex justify-content-md-end justify-content-between">
                   <a href="showcart.php">
                     <i class="fa fa-shopping-cart" style="font-size:24px;color:white;">
-                      
+
                         <?php
                         include 'countcart.php';
                         echo "<span class='badge' style='background-color:#6394F8;border-radius:10px;font-size:12px;padding:3px 7px;'>".$count."</span>";
                       ?>
-                      
+
                   </i>
                 </a>
 
 
                 </div>
               </div>
-              
-            
+
+
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@
         <div id="navbar" role="navigation" class="navbar navbar-expand-lg" style="position:fixed;width:100%";>
           <div class="container"><a href="homepag1.php" class="navbar-brand home"><a href="homepag1.php" class="navbar-brand home"><img src="../html1/img/technophilerentalimages/logo.jpg" class="d-none d-md-inline-block" width="110" height="75" style="left:30px;float:left;position:fixed;"><img src="../html1/img/technophilerentalimages/logo.jpg" class="d-inline-block d-md-none" width="110" height="75" style="left:30px;float:left;position:fixed;"></a>
             <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
-        
+
             <div id="search" class="collapse clearfix">
               <form role="search" class="navbar-form">
                 <div class="input-group">
@@ -160,9 +160,9 @@
       <?php
         include 'databaseconnection.php';
                       $pid=$_GET["Pid"];
-                      
+
             $sql="Select * from description where pid=".$pid."";
-            
+
             $result=mysqli_query($conn,$sql);
             if(mysqli_num_rows($result)>0){
               while($row=mysqli_fetch_assoc($result)){
@@ -173,7 +173,7 @@
       ?>
             <!-- LEFT COLUMN _________________________________________________________-->
             <div class="col-lg-9">
-              
+
               <p class="goToDescription"><a href="#details" class="scroll-to text-uppercase">Scroll to terms and conditions</a></p>
               <div id="productMain" class="row">
                 <div class="col-sm-6">
@@ -191,49 +191,51 @@
                         $table="playstation";
                       }else if($test=="5"){
                         $table="karoke";
+                      }else if($test=="6"){
+                        $table="camera";
                       }else{
                         $table="boardgames";
                       }
-                      
-                    
+
+
                      $max=3;
                       $sql="Select Image,Perday from search where Pid=".$pid."";
                       if(!isset($_SESSION["lastviewed"]))     {
                           $_SESSION["lastviewed"] =array();
                      }
                       if (isset($_GET['Pid']) && $_GET['Pid'] <> "") {
-                          if (in_array($_GET['Pid'], $_SESSION["lastviewed"])) { 
-                            
-                               $_SESSION["lastviewed"] = array_diff($_SESSION["lastviewed"],array($_GET['Pid'])) ; 
-                              $_SESSION["lastviewed"] = array_values($_SESSION["lastviewed"]); 
+                          if (in_array($_GET['Pid'], $_SESSION["lastviewed"])) {
+
+                               $_SESSION["lastviewed"] = array_diff($_SESSION["lastviewed"],array($_GET['Pid'])) ;
+                              $_SESSION["lastviewed"] = array_values($_SESSION["lastviewed"]);
                       }
                       if (count($_SESSION["lastviewed"]) >= $max) {
-                        
-                        $_SESSION["lastviewed"] = array_slice($_SESSION["lastviewed"],1); 
+
+                        $_SESSION["lastviewed"] = array_slice($_SESSION["lastviewed"],1);
                         array_push($_SESSION["lastviewed"],$_GET['Pid']);
                     } else {
-                              
+
                               array_push($_SESSION["lastviewed"],$_GET['Pid']);
                             }
                       }
-                      
-                     
+
+
 
                       $result=mysqli_query($conn,$sql);
                       if(mysqli_num_rows($result)>0){
                         while($row=mysqli_fetch_assoc($result)){
                         echo "<div> <img src='".$row['Image']."' alt='Cannot display image' class='img-fluid'></div>";
-                        }    
+                        }
                       }
                     ?>
-                    
-                    
+
+
                   </div>
                 </div>
                 <div class="col-sm-6">
 
                   <div class="box">
-                    
+
                       <input type="hidden" name="pid" value="<?php echo $pid;?>"/>
                       <input type="hidden" name="test" value="<?php echo $test;?>"/>
                       <?php
@@ -261,17 +263,17 @@
                         echo "<a href='showcart.php?Pid=".$pid."' style='text-decoration:none;' class='btn btn-secondary'><i class='fa fa-shopping-cart'></i>Add to cart</a> ";
                         }
                       echo "</p>";
-                        }  
                         }
-                        
+                        }
+
                       ?>
-                        
-                      
-                      
-                    
-                    
+
+
+
+
+
                   </div>
-                  
+
                 </div>
               </div>
               <div id="details" class="box mb-4 mt-4">
@@ -282,9 +284,9 @@
                   $sql="Select * from terms";
                   $res=mysqli_query($conn,$sql);
                   if(mysqli_num_rows($res)>0){
-                    
+
                         while($row=mysqli_fetch_assoc($res)){
-                          
+
                           echo "<h4>Order Confirmation Date</h4>";
                           echo"<p>".$row["OrderDate"]."</p>" ;
                           echo "<br>";
@@ -293,13 +295,13 @@
                           echo "<br>";
                           echo "<h4>Damage</h4>";
                           echo"<p>".$row["Damage"]."</p>" ;
-                          
-                    
+
+
                         }
                       }
 
 
-                ?> 
+                ?>
                 <!-- <p>White lace top, woven, has a round neck, short sleeves, has knitted lining attached</p>
                 <h4>Material & care</h4>
                 <ul>
@@ -313,8 +315,8 @@
                 </ul> -->
 
               </div>
-              
-              
+
+
               <div class="row">
                 <div class="col-lg-3 col-md-6">
                   <div class="box text-uppercase mt-0 mb-small">
@@ -338,7 +340,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  
+
                   <div class="product">
                     <?php
                       include 'databaseconnection.php';
@@ -350,17 +352,17 @@
                         while($row=mysqli_fetch_assoc($result)){
                           echo "<div class='image'><a href='display.php?Pid=".$row['Pid']."&test=$test''><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>
                     <div class='text'>
-                                          
+
                                           <p class='price'>Perday rent: <b>".$row["Perday"]."</b></p>
                     </div>";
-                    
+
                         }
                       }
 
 
                     }
                 ?>
-                    
+
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -375,17 +377,17 @@
                         while($row=mysqli_fetch_assoc($result)){
                           echo "<div class='image'><a href='display.php?Pid=".$row['Pid']."&test=$test''><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>
                     <div class='text'>
-                                          
+
                                           <p class='price'>Perday rent: <b>".$row["Perday"]."</b></p>
                     </div>";
-                    
+
                         }
                       }
 
                     }
-                      
+
                     ?>
-                    
+
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -400,17 +402,17 @@
                         while($row=mysqli_fetch_assoc($result)){
                           echo "<div class='image'><a href='display.php?Pid=".$row['Pid']."&test=$test''><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>
                     <div class='text'>
-                                          
+
                     <p class='price'>Perday rent: <b>".$row["Perday"]."</b></p>
                       </div>";
-                    
+
                         }
                       }
 
 
                     }
                                          ?>
-                    
+
                   </div>
                 </div>
               </div>
@@ -432,7 +434,7 @@
 
                     ?></a>
 
-                      
+
                     </li>
                     <li class="nav-item"><a href="speaker.php" class="nav-link d-flex align-items-center justify-content-between"><span>Speakers </span><?php
                         include 'databaseconnection.php';
@@ -442,7 +444,7 @@
                         echo "<span class='badge badge-light'>$count</span>";
 
                     ?></a>
-                      
+
                     </li>
                     <li class="nav-item"><a href="hoverboard.php" class="nav-link d-flex align-items-center justify-content-between"><span>Hoverboards and Drones </span><?php
                         include 'databaseconnection.php';
@@ -452,7 +454,7 @@
                         echo "<span class='badge badge-light'>$count</span>";
 
                     ?></a>
-                      
+
                     </li>
                     <li class="nav-item"><a href="playstation.php" class="nav-link d-flex align-items-center justify-content-between"><span>PlayStation </span><?php
                         include 'databaseconnection.php';
@@ -462,7 +464,7 @@
                         echo "<span class='badge badge-light'>$count</span>";
 
                     ?></a>
-                      
+
                     </li>
                     <li class="nav-item"><a href="karoke.php" class="nav-link d-flex align-items-center justify-content-between"><span>Karaoke and remote controls </span><?php
                         include 'databaseconnection.php';
@@ -472,7 +474,7 @@
                         echo "<span class='badge badge-light'>$count</span>";
 
                     ?></a>
-                      
+
                     </li>
                     <li class="nav-item"><a href="board.php" class="nav-link d-flex align-items-center justify-content-between"><span>Board Games  </span><?php
                         include 'databaseconnection.php';
@@ -482,18 +484,18 @@
                         echo "<span class='badge badge-light'>$count</span>";
 
                     ?></a>
-                     
+
                     </li>
                   </ul>
                 </div>
               </div>
-              
+
             </div>
 
       <!-- GET IT-->
-      
+
       <!-- FOOTER -->
-      
+
     </div>
     <!-- Javascript files-->
     <script src="../html1/vendor/jquery/jquery.min.js"></script>

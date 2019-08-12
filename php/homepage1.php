@@ -96,7 +96,7 @@
                 <ul class="dropdown-menu megamenu">
                   <li>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="Profile.php" class="nav-link">Profile</a></li>
+                          <li class="nav-item"><a href="profile.php" class="nav-link">Profile</a></li>
                           <li class="nav-item"><a href="showcart.php" class="nav-link">Your Cart
                                               <i class="fa fa-shopping-cart" style="font-size:24px;color:white;">
                                                  <?php
@@ -267,6 +267,16 @@
                     <li class="nav-item"><a href="board.php" class="nav-link d-flex align-items-center justify-content-between"><span>Board Games  </span><?php
                         include 'databaseconnection.php';
                         $sql="Select * from boardgames";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+                    </li>
+                    <li class="nav-item"><a href="camera.php" class="nav-link d-flex align-items-center justify-content-between"><span>Camera's </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from camera";
                         $result=mysqli_query($conn,$sql);
                         $count=mysqli_num_rows($result);
                         echo "<span class='badge badge-light'>$count</span>";
