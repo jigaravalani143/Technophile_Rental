@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2019 at 03:33 PM
+-- Generation Time: Aug 20, 2019 at 02:07 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -45,11 +45,11 @@ CREATE TABLE `boardgames` (
 --
 
 INSERT INTO `boardgames` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(12, 'Funskool Game of Life Board Game', 3, 100, 300, 600, '', 'yes', '../images/technophilerentalimages/life.jpg'),
-(13, 'Hasbro Games Taboo Board Game', 2, 150, 500, 750, '', 'yes', '../images/technophilerentalimages/taboo.jpg'),
-(14, 'Simba Squap Catch Ball Game', 2, 150, 500, 1500, '', 'yes', '../images/technophilerentalimages/squap.jpg'),
-(19, 'Mattel UNO Spin', 2, 150, 400, 1200, '', 'yes', '../images/technophilerentalimages/unospin.jpg'),
-(20, 'Monopoly Board Game', 3, 300, 600, 1500, '', 'yes', '../images/technophilerentalimages/monopoly.jpg');
+(12, 'Funskool Game of Life Board Game', 3, 100, 300, 600, '', 'yes', '../html1/img/technophilerentalimages/life.jpg'),
+(13, 'Hasbro Games Taboo Board Game', 2, 150, 500, 750, '', 'yes', '../html1/img/technophilerentalimages/taboo.jpg'),
+(14, 'Simba Squap Catch Ball Game', 2, 150, 500, 1500, '', 'yes', '../html1/img/technophilerentalimages/squap.jpg'),
+(19, 'Mattel UNO Spin', 2, 150, 400, 1200, '', 'yes', '../html1/img/technophilerentalimages/unospin.jpg'),
+(20, 'Monopoly Board Game', 3, 300, 600, 1500, '', 'yes', '../html1/img/technophilerentalimages/monopoly.jpg');
 
 -- --------------------------------------------------------
 
@@ -74,8 +74,8 @@ CREATE TABLE `camera` (
 --
 
 INSERT INTO `camera` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(31, 'Nikon DSLR', 3, 2000, 10000, 40000, '0000-00-00', 'yes', '../images/technophilerentalimages/nikon.jpg'),
-(32, 'Canon DSLR', 2, 2300, 10000, 50000, '0000-00-00', 'yes', '../images/technophilerentalimages/canon.jpg');
+(31, 'Nikon DSLR', 3, 2000, 10000, 40000, '0000-00-00', 'yes', '../html1/img/technophilerentalimages/nikon.jpg'),
+(32, 'Canon DSLR', 2, 2300, 10000, 50000, '0000-00-00', 'yes', '../html1/img/technophilerentalimages/canon.jpg');
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,14 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`Email`, `Pid`, `Quantity`, `Name`, `Perday`, `Image`, `Maxquantity`) VALUES
-('jigar@gmail.com', 1, 1, 'Ultimate Ears 2', 450, '../images/technophilerentalimages/ue roll 22.jpg', 1);
+('j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '../html1/img/technophilerentalimages/punk.jpg', 2),
+('j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '../html1/img/technophilerentalimages/hover.jpg', 2),
+('j@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('jigar@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '../html1/img/technophilerentalimages/ue roll 22.jpg', 1),
+('jigar@gmail.com', 15, 1, 'Beats By Dr.Dre Mixr Headphone\r\n', 600, '../html1/img/technophilerentalimages/beats mixr.jpg', 2),
+('jigar@gmail.com', 32, 1, 'Canon DSLR', 2300, '../html1/img/technophilerentalimages/canon.jpg', 2),
+('jigar@gmail.com', 31, 3, 'Nikon DSLR', 2000, '../html1/img/technophilerentalimages/nikon.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -136,7 +143,7 @@ INSERT INTO `description` (`pid`, `description`) VALUES
 (1, 'The big, bold, beautiful sound of UE ROLL 2 gives adventure a soundtrack. Sound so loud, you’ll have to shout to be heard. It’s an ultra-portable wireless Bluetooth speaker that goes where you go with a stretchy, attachable bungee. You can even attach it to a kayak – it’s totally waterproof.'),
 (2, 'The rugged, water-resistant SOL Republic Punk Wireless Speaker is an attractively designed portable Bluetooth speaker that can get quite loud for its very modest frame.'),
 (3, 'The Monster Clarity Designer Series delivers rich sound with clarity '),
-(4, 'The best in the business'),
+(4, '•	Bose l1 compact-Bose Spatial Dispersion loudspeaker technology delivers sound evenly across the stage and throughout the audience-even to the extreme sides\r\n•	Two Tone Match channels with fixed presets for a handheld microphone and an acoustic guitar\r\n•	Integrated bass speaker in power stand\r\n•	Two setup positions: collapsed for smaller spaces or extended for larger ones\r\n•	Ideal for musical performances, mobile DJs, classrooms, business presentations and other events\r\n'),
 (5, 'Marshall Stanmore is a compact active stereo speaker with wireless      bluetooth connectivity as well as analogue interaction knobs.'),
 (7, 'Our most luxurious headphones – H9i combine ANC, wireless, an innovative aluminium touch interface and Bang & Olufsen Signature Sound\r\n	Advanced Active Noise Cancellation\r\n	Transparency Mode\r\n'),
 (15, 'Beats mixr headphones are built to withstand the rigors of DJ life, which means creating a housing flexible and tough enough to take a beating. The ultra-flexible headband was also crafted to be super lightweight and easily foldable for jetting off to your next destination'),
@@ -155,9 +162,10 @@ INSERT INTO `description` (`pid`, `description`) VALUES
 (26, 'Uncharted 4: A Thief\'s End\r\nSeveral years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves.|With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure.\r\nHis greatest adventure will test his physical limits, his resolve, and ultimately what he\'s willing to sacrifice to save the ones he loves.\r\n\r\n\r\n'),
 (21, 'How about a surprise Karaoke evening with friends? Too lazy to head out? Well, Karaoke Magic Sing ET- 25 K is the key solution. All you need is a TV to connect to and you are good to go for a musical evening.This Karaoke microphone has all the controls of volume, echo, tempo and even the countdown timer, so just sit, dance, stand, run and JUST sing. This microphone is very easy to set up .This Magic device comes with 3806 inbuilt songs with a collection of 1509 Hindi + 2001 English +198 Marathi and 98 Punjabi songs. Have a party with cultural diversity and just create the sense of unity amongst your friends. The songs are easy to read and You can search the songs on screen or refer to the hand book in which the songs are arranged in an alphabetical order. This was for the music lovers.'),
 (22, 'What\'s new in \"Symphony\" - 1st time in India Android karaoke player. Make your phone the remote of system. Recorded files can be directly extracted to mobile. Lightweight to use and easy to carry. Connect webcam and see yourself while singing. e-Manual to save paper features 2.4GHz wireless microphone i-Fun Android karaoke player. Works direct with your TV and can be connected through Wi-Fi. HDMI output. Can install application from play store. Pen drive can be attached for playing video/audio/image in your TV. 16GB in built memory. Track pad on the microphone to navigate through the system song reserves song favorite up to 150 songs. Song recording up to 150 songs. Select song list by alphabet, word or singer.'),
+(23, 'The BBZ252 Bluetooth RC Car can be controlled directly from your iPhone or iPad using the specific BeeWi Control Pad application available on iTunes. The Bluetooth RC car works as a regular RC Car with forward/backward direction and left/right steering. The application provided allows for both touch screen and motion control, offering a richer and more user friendly experience. The BBZ252 RC Car is Bluetooth 2.1 compliant and it is compatible with all Bluetooth compliant iOS devices using Wireless iAp proto'),
 (24, 'Did you miss a chance to own one of the limited production Ford GT racing machines when they launched in 2005? Here\'s an opportunity to own the same gorgeous car, in a beautiful red, in a much smaller scale. This remote control car is manufactured in a 1:18 scale and is an accurate replica of the real deal. Impress your friends and have hours of fun racing at a fraction of the cost of the real car. It operates with 4 AA batteries for the car and one 9V battery for the remote control, not included. Model is 10 inches long by 4 inches wide, 2 inches high. For ages 8 and up, adult supervision required. Product color may vary.'),
 (31, 'Nikon D5600 DSLR Camera Body with Dual Lens: AF-P DX Nikkor 18 - 55 MM F/3.5-5.6G VR and 70-300 MM F/4.5-6.3G ED VR (16 GB SD Card)  (Black)'),
-(32, 'Canon EOS 1500D DSLR Camera Body Dual kit with EF-S 18-55 IS II + 55-250 IS II lens (16 GB Memory Card & Carry Case )  (Black)');
+(32, 'Canon EOS 200D DSLR Camera Body with Dual Lens: EF-S18-55 IS STM + EF-S 55-250 IS STM (16 GB SD Card + Camera Bag)  (Black)');
 
 -- --------------------------------------------------------
 
@@ -182,10 +190,10 @@ CREATE TABLE `hoveranddrone` (
 --
 
 INSERT INTO `hoveranddrone` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(9, 'Hoverboard Self Balance Scooter 2 ', 2, 500, 1200, 12000, '2/7/15/30', 'yes', '../images/technophilerentalimages/hover.jpg'),
-(10, 'SWAGTRON T580 Bluetooth Hoverboard', 1, 700, 2500, 15000, '2/7/15/30', 'yes', '../images/technophilerentalimages/hover 2.jpg'),
-(11, 'Parrot Mini Drone Jumping Sumo - White', 1, 1000, 7000, 30000, '2/7/15/30', 'no', '../images/technophilerentalimages/jumping.jpg'),
-(18, 'Parrot Jumping Night MiniDrone - Diesel (Blue)', 1, 700, 2000, 12550, '2/7/15/30', 'no', '../images/technophilerentalimages/drone.jpg');
+(9, 'Hoverboard Self Balance Scooter 2 ', 2, 500, 1200, 12000, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/hover.jpg'),
+(10, 'SWAGTRON T580 Bluetooth Hoverboard', 1, 700, 2500, 15000, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/hover 2.jpg'),
+(11, 'Parrot Mini Drone Jumping Sumo - White', 1, 1000, 7000, 30000, '2/7/15/30', 'no', '../html1/img/technophilerentalimages/jumping.jpg'),
+(18, 'Parrot Jumping Night MiniDrone - Diesel (Blue)', 1, 700, 2000, 12550, '2/7/15/30', 'no', '../html1/img/technophilerentalimages/drone.jpg');
 
 -- --------------------------------------------------------
 
@@ -210,9 +218,10 @@ CREATE TABLE `karoke` (
 --
 
 INSERT INTO `karoke` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(21, 'Karaoke Magic Sing ET-25 K', 2, 1500, 4000, 10000, '', 'no', '../images/technophilerentalimages/magic.jpg'),
-(22, 'Persang Karaoke Symphony PK-8080', 1, 4000, 18000, 45000, '', 'no', '../images/technophilerentalimages/download.jpg'),
-(24, 'Mustang GT Vehicle, Red with Black Stripes', 1, 1000, 3000, 8000, '', 'no', '../images/technophilerentalimages/car1.jpg');
+(21, 'Karaoke Magic Sing ET-25 K', 2, 1500, 4000, 10000, '', 'no', '../html1/img/technophilerentalimages/magic.jpg'),
+(22, 'Persang Karaoke Symphony PK-8080', 1, 4000, 18000, 45000, '', 'no', '../html1/img/technophilerentalimages/download.jpg'),
+(23, 'BeeWi Bluetooth Mini Coupé Red Remote Control Car ', 1, 1800, 3500, 6000, '', 'yes', '../html1/img/technophilerentalimages/car.jpg'),
+(24, 'Mustang GT Vehicle, Red with Black Stripes', 1, 1000, 3000, 8000, '', 'no', '../html1/img/technophilerentalimages/car1.jpg');
 
 -- --------------------------------------------------------
 
@@ -231,8 +240,10 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`email`, `password`) VALUES
 ('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592'),
-('yashvora99@gmail.com', 'dc06698f0e2e75751545455899adccc3'),
-('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224');
+('j@gmail.com', 'd4a23b0584a5d286fe25ed6b3afb20ef'),
+('jigar@gmail', 'd77621addded6beeca5ab84bd0eef224'),
+('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224'),
+('hello@abc.com', '5d41402abc4b2a76b9719d911017c592');
 
 -- --------------------------------------------------------
 
@@ -257,8 +268,8 @@ CREATE TABLE `playstation` (
 --
 
 INSERT INTO `playstation` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(25, 'FIFA 18  (for PS4)', 3, 350, 1000, 3000, '', 'yes', '../images/technophilerentalimages/fifa.jpg'),
-(26, 'Uncharted 4:A thiefs end', 2, 400, 800, 2500, '', 'yes', '../images/technophilerentalimages/uncharted.jpg');
+(25, 'FIFA 18  (for PS4)', 3, 350, 1000, 3000, '', 'yes', '../html1/img/technophilerentalimages/fifa.jpg'),
+(26, 'Uncharted 4:A thiefs end', 2, 400, 800, 2500, '', 'yes', '../html1/img/technophilerentalimages/uncharted.jpg');
 
 -- --------------------------------------------------------
 
@@ -285,9 +296,11 @@ CREATE TABLE `procorder` (
 
 INSERT INTO `procorder` (`fname`, `lname`, `address`, `phone`, `email`, `pid`, `quantityod`, `name`, `perday`, `date`) VALUES
 ('Priyam', 'Vora', '2/21 shaparia bldg', 9029287010, 'priyamvora99@gmail.com', 21, 1, 'Karaoke Magic Sing ET-25 K\r\n', 1500, '13/04/2018'),
-('Yash', 'Vora', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9920096026, 'yashvora99@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '30/07/2019'),
-('Yash', 'Vora', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9920096026, 'yashvora99@gmail.com', 10, 1, 'SWAGTRON T580 Bluetooth Hoverboard', 700, '30/07/2019'),
-('Yash', 'Vora', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9920096026, 'yashvora99@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '30/07/2019');
+('Jigar', 'Avalani', 'jadwvdevfev', 45974556454, 'j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '31/07/2019'),
+('Jigar', 'Avalani', 'jadwvdevfev', 45974556454, 'j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 2, 1, 'Sol Punk\r\n', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 9, 1, 'Hoverboard Self Balance Scooter 2 ', 500, '31/07/2019'),
+('j', 'j', 'jojo', 4566666666, 'j@gmail.com', 1, 1, 'Ultimate Ears Roll 2\r\n', 450, '31/07/2019');
 
 -- --------------------------------------------------------
 
@@ -313,19 +326,19 @@ CREATE TABLE `product_catalogue` (
 --
 
 INSERT INTO `product_catalogue` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Description`, `Image`) VALUES
-(1, 'Ultimate Ears Roll 2', 1, 450, 2000, 8500, '2', 'yes', 'Some text', '../images/technophilerentalimages/ue roll 22.jpg'),
-(2, 'Sol Punk', 3, 500, 2000, 6750, '2/7/15/30', 'yes', 'some text', '../images/technophilerentalimages/punk.jpg'),
-(3, 'Monster Clarity Hd', 2, 400, 3000, 8750, '2/7/15/30', 'yes', 'Some Text', '../images/technophilerentalimages/monster2.jpg'),
-(4, 'Bose L1 compact', 1, 700, 5000, 86540, '2/7/15/30', 'yes', 'some text', '../images/technophilerentalimages/bose.jpg'),
-(5, 'Marshall Kilburn', 3, 700, 4000, 37000, '2/7/15/30', 'No', 'Some text', '../images/technophilerentalimages/marshall.jpg'),
-(7, 'Beoplay', 1, 600, 2500, 10000, '2/7/15/30', 'yes', 'Some text', '../images/technophilerentalimages/bo.jpg'),
-(9, 'Hoverboard Self Balance Scooter 2 ', 2, 500, 1200, 12000, '2/7/15/30', 'yes', 'Some text', '../images/technophilerentalimages/hover.jpg'),
-(10, 'SWAGTRON T580 Bluetooth Hoverboard', 1, 700, 2500, 12000, '2/7/15/30', 'yes', 'Some text', '../images/technophilerentalimages/hover 2.jpg'),
-(11, 'Parrot Mini Drone Jumping Sumo - White\r\n', 1, 1000, 7000, 30000, '2/7/15/30', 'no', 'Some text', '../images/technophilerentalimages/jumping.jpg'),
-(12, 'Funskool Game of Life Board Game', 3, 100, 1000, 600, '', 'yes', 'Some text', '../images/technophilerentalimages/life.jpg'),
-(13, 'Hasbro Games Taboo Board Game', 2, 150, 500, 750, '', 'yes', 'Some text', '../images/technophilerentalimages/taboo.jpg'),
-(14, 'Simba Squap Catch Ball Game\r\n', 2, 150, 500, 1500, '', 'yes', 'Some text', '../images/technophilerentalimages/squap.jpg'),
-(15, 'Beats By Dr.Dre Mixr Headphone\r\n', 2, 600, 1500, 22080, '2/7/15/30', 'yes', 'Some Text', '../images/technophilerentalimages/beats mixr.jpg');
+(1, 'Ultimate Ears Roll 2', 1, 450, 2000, 8500, '2', 'yes', 'Some text', '../html1/img/technophilerentalimages/ue roll 22.jpg'),
+(2, 'Sol Punk', 3, 500, 2000, 6750, '2/7/15/30', 'yes', 'some text', '../html1/img/technophilerentalimages/punk.jpg'),
+(3, 'Monster Clarity Hd', 2, 400, 3000, 8750, '2/7/15/30', 'yes', 'Some Text', '../html1/img/technophilerentalimages/monster2.jpg'),
+(4, 'Bose L1 compact', 1, 700, 5000, 86540, '2/7/15/30', 'yes', 'some text', '../html1/img/technophilerentalimages/bose.jpg'),
+(5, 'Marshall Kilburn', 3, 700, 4000, 37000, '2/7/15/30', 'No', 'Some text', '../html1/img/technophilerentalimages/marshall.jpg'),
+(7, 'Beoplay', 1, 600, 2500, 10000, '2/7/15/30', 'yes', 'Some text', '../html1/img/technophilerentalimages/bo.jpg'),
+(9, 'Hoverboard Self Balance Scooter 2 ', 2, 500, 1200, 12000, '2/7/15/30', 'yes', 'Some text', '../html1/img/technophilerentalimages/hover.jpg'),
+(10, 'SWAGTRON T580 Bluetooth Hoverboard', 1, 700, 2500, 12000, '2/7/15/30', 'yes', 'Some text', '../html1/img/technophilerentalimages/hover 2.jpg'),
+(11, 'Parrot Mini Drone Jumping Sumo - White\r\n', 1, 1000, 7000, 30000, '2/7/15/30', 'no', 'Some text', '../html1/img/technophilerentalimages/jumping.jpg'),
+(12, 'Funskool Game of Life Board Game', 3, 100, 1000, 600, '', 'yes', 'Some text', '../html1/img/technophilerentalimages/life.jpg'),
+(13, 'Hasbro Games Taboo Board Game', 2, 150, 500, 750, '', 'yes', 'Some text', '../html1/img/technophilerentalimages/taboo.jpg'),
+(14, 'Simba Squap Catch Ball Game\r\n', 2, 150, 500, 1500, '', 'yes', 'Some text', '../html1/img/technophilerentalimages/squap.jpg'),
+(15, 'Beats By Dr.Dre Mixr Headphone\r\n', 2, 600, 1500, 22080, '2/7/15/30', 'yes', 'Some Text', '../html1/img/technophilerentalimages/beats mixr.jpg');
 
 -- --------------------------------------------------------
 
@@ -348,31 +361,32 @@ CREATE TABLE `search` (
 --
 
 INSERT INTO `search` (`Pid`, `Name`, `tab`, `Quantity`, `Perday`, `Deposit`, `Image`) VALUES
-(1, 'Ultimate Ears 2', 'speaker', 1, 450, 2000, '../images/technophilerentalimages/ue roll 22.jpg'),
-(2, 'Sol Punk\r\n', 'speaker', 3, 500, 2000, '../images/technophilerentalimages/punk.jpg'),
-(3, 'Monster Clarity Hd', 'speaker', 2, 400, 3000, '../images/technophilerentalimages/monster2.jpg'),
-(4, 'Bose L1 compact\r\n', 'speaker', 1, 700, 5000, '../images/technophilerentalimages/bose.jpg'),
-(5, 'Marshall Kilburn\r\n', 'speaker', 3, 700, 4000, '../images/technophilerentalimages/marshall.jpg'),
-(7, 'Beoplay', 'speaker', 1, 600, 2500, '../images/technophilerentalimages/bo.jpg'),
-(9, 'Hoverboard Self Balance Scooter 2 ', 'hoveranddrone', 2, 500, 1200, '../images/technophilerentalimages/hover.jpg'),
-(10, 'SWAGTRON T580 Bluetooth Hoverboard', 'hoveranddrone', 1, 700, 2500, '../images/technophilerentalimages/hover 2.jpg'),
-(11, 'Parrot Mini Drone Jumping Sumo - White\r\n', 'hoveranddrone', 1, 1000, 7000, '../images/technophilerentalimages/jumping.jpg'),
-(12, 'Funskool Game of Life Board Game', 'boardgames', 3, 100, 1000, '../images/technophilerentalimages/life.jpg'),
-(13, 'Hasbro Games Taboo Board Game', 'boardgames', 2, 150, 500, '../images/technophilerentalimages/taboo.jpg'),
-(14, 'Simba Squap Catch Ball Game\r\n', 'boardgames', 2, 150, 500, '../images/technophilerentalimages/squap.jpg'),
-(15, 'Beats By Dr.Dre Mixr Headphone\r\n', 'speaker', 2, 600, 1500, '../images/technophilerentalimages/beats mixr.jpg'),
-(16, 'STK Flasko Splashproof Bluetooth Speaker\r\n', 'speaker', 3, 300, 800, '../images/technophilerentalimages/flasko.jpg'),
-(17, 'Monster Blaster Boombox Wireless Speaker\r\n', 'speaker', 2, 1500, 6000, '../images/technophilerentalimages/monster.jpg\r\n'),
-(18, 'Parrot Jumping Night MiniDrone - Diesel (Blue)\r\n', 'hoveranddrone', 1, 700, 2000, '../images/technophilerentalimages/drone.jpg\r\n'),
-(19, 'Mattel UNO Spin\r\n', 'boardgames', 2, 150, 400, '../images/technophilerentalimages/unospin.jpg\r\n'),
-(20, 'Monopoly Board Game\r\n', 'boardgames', 3, 300, 600, '../images/technophilerentalimages/monopoly.jpg '),
-(21, 'Karaoke Magic Sing ET-25 K\r\n', 'karoke', 2, 1500, 4000, '../images/technophilerentalimages/magic.jpg '),
-(22, 'Persang Karaoke Symphony PK-8080\r\n', 'karoke', 1, 400, 800, '../images/technophilerentalimages/download.jpg'),
-(24, 'Mustang GT Vehicle, Red with Black Stripes\r\n', 'karoke', 1, 1000, 3000, '../images/technophilerentalimages/car1.jpg '),
-(25, 'FIFA 18  (for PS4)\r\n', 'playstation', 3, 350, 1000, '../images/technophilerentalimages/fifa.jpg\r\n'),
-(26, 'Uncharted 4:A thiefs end\r\n', 'playstation', 2, 400, 800, '../images/technophilerentalimages/uncharted.jpg\r\n'),
-(31, 'Nikon DSLR', 'camera', 3, 2000, 10000, '../images/technophilerentalimages/nikon.jpg'),
-(32, 'Canon DSLR', 'camera', 2, 2300, 10000, '../images/technophilerentalimages/canon.jpg');
+(1, 'Ultimate Ears Roll 2\r\n', 'speaker', 1, 450, 2000, '../html1/img/technophilerentalimages/ue roll 22.jpg'),
+(2, 'Sol Punk\r\n', 'speaker', 2, 500, 2000, '../html1/img/technophilerentalimages/punk.jpg'),
+(3, 'Monster Clarity Hd\r\n', 'speaker', 0, 400, 3000, '../html1/img/technophilerentalimages/monster2.jpg'),
+(4, 'Bose L1 compact\r\n', 'speaker', 1, 700, 5000, '../html1/img/technophilerentalimages/bose.jpg'),
+(5, 'Marshall Kilburn\r\n', 'speaker', 3, 700, 4000, '../html1/img/technophilerentalimages/marshall.jpg'),
+(7, 'Beoplay', 'speaker', 1, 600, 2500, '../html1/img/technophilerentalimages/bo.jpg'),
+(9, 'Hoverboard Self Balance Scooter 2 ', 'hoveranddrone', 2, 500, 1200, '../html1/img/technophilerentalimages/hover.jpg'),
+(10, 'SWAGTRON T580 Bluetooth Hoverboard', 'hoveranddrone', 1, 700, 2500, '../html1/img/technophilerentalimages/hover 2.jpg'),
+(11, 'Parrot Mini Drone Jumping Sumo - White\r\n', 'hoveranddrone', 1, 1000, 7000, '../html1/img/technophilerentalimages/jumping.jpg'),
+(12, 'Funskool Game of Life Board Game', 'boardgames', 1, 100, 1000, '../html1/img/technophilerentalimages/life.jpg'),
+(13, 'Hasbro Games Taboo Board Game', 'boardgames', 0, 150, 500, '../html1/img/technophilerentalimages/taboo.jpg'),
+(14, 'Simba Squap Catch Ball Game\r\n', 'boardgames', 2, 150, 500, '../html1/img/technophilerentalimages/squap.jpg'),
+(15, 'Beats By Dr.Dre Mixr Headphone\r\n', 'speaker', 2, 600, 1500, '../html1/img/technophilerentalimages/beats mixr.jpg'),
+(16, 'STK Flasko Splashproof Bluetooth Speaker\r\n', 'speaker', 3, 300, 800, '../html1/img/technophilerentalimages/flasko.jpg'),
+(17, 'Monster Blaster Boombox Wireless Speaker\r\n', 'speaker', 2, 1500, 6000, '../html1/img/technophilerentalimages/monster.jpg\r\n'),
+(18, 'Parrot Jumping Night MiniDrone - Diesel (Blue)\r\n', 'hoveranddrone', 1, 700, 2000, '../html1/img/technophilerentalimages/drone.jpg\r\n'),
+(19, 'Mattel UNO Spin\r\n', 'boardgames', 2, 150, 400, '../html1/img/technophilerentalimages/unospin.jpg\r\n'),
+(20, 'Monopoly Board Game\r\n', 'boardgames', 3, 300, 600, '../html1/img/technophilerentalimages/monopoly.jpg '),
+(21, 'Karaoke Magic Sing ET-25 K\r\n', 'karoke', 2, 1500, 4000, '../html1/img/technophilerentalimages/magic.jpg '),
+(22, 'Persang Karaoke Symphony PK-8080\r\n', 'karoke', 2, 400, 800, '../html1/img/technophilerentalimages/download.jpg'),
+(23, 'BeeWi Bluetooth Mini Coupé Red Remote Control Car\r\n', 'karoke', 1, 1800, 3500, '../html1/img/technophilerentalimages/car.jpg '),
+(24, 'Mustang GT Vehicle, Red with Black Stripes\r\n', 'karoke', 1, 1000, 3000, '../html1/img/technophilerentalimages/car1.jpg '),
+(25, 'FIFA 18  (for PS4)\r\n', 'playstation', 3, 350, 1000, '../html1/img/technophilerentalimages/fifa.jpg\r\n'),
+(26, 'Uncharted 4:A thiefs end\r\n', 'playstation', 2, 400, 800, '../html1/img/technophilerentalimages/uncharted.jpg\r\n'),
+(31, 'Nikon DSLR', 'camera', 3, 2000, 10000, '../html1/img/technophilerentalimages/nikon.jpg'),
+(32, 'Canon DSLR', 'camera', 2, 2300, 10000, '../html1/img/technophilerentalimages/canon.jpg');
 
 -- --------------------------------------------------------
 
@@ -395,8 +409,10 @@ CREATE TABLE `signup` (
 
 INSERT INTO `signup` (`email`, `password`, `name`, `address`, `phone`, `lname`) VALUES
 ('priyamvora99@gmail.com', '5d41402abc4b2a76b9719d911017c592', 'Priyam', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9029287010, 'Vora'),
-('yashvora99@gmail.com', 'dc06698f0e2e75751545455899adccc3', 'Yash', '2/21 shaparia bldg, 74 new charni road ,prathna samaj', 9920096026, 'Vora'),
-('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224', 'jigar', 'kzhxdwbdwfuw', 4563214568, 'avalani`');
+('j@gmail.com', 'd4a23b0584a5d286fe25ed6b3afb20ef', 'Jigar', 'jabxjsbcfjw', 1425638789, 'Avalani'),
+('jigar@gmail', 'd77621addded6beeca5ab84bd0eef224', 'jigar', 'ajsvdwhvd', 9865214635, 'avalani'),
+('jigar@gmail.com', 'd77621addded6beeca5ab84bd0eef224', 'Jigar ', 'fwyfdywgfuw wjwfuwgfuw jfeiufvguwvf uwgfugf', 98745632145, 'Avalani'),
+('hello@abc.com', '5d41402abc4b2a76b9719d911017c592', 'hello', 'Hey Bro', 4563782902, 'hie');
 
 -- --------------------------------------------------------
 
@@ -421,15 +437,15 @@ CREATE TABLE `speaker` (
 --
 
 INSERT INTO `speaker` (`Pid`, `Name`, `Quantity`, `Perday`, `Deposit`, `Mrp`, `DaysOption`, `Demo`, `Image`) VALUES
-(1, 'Ultimate Ears 2', 1, 450, 2000, 8500, '2/7/15/30', 'yes', '../images/technophilerentalimages/ue roll 22.jpg'),
-(2, 'Sol Punk', 3, 500, 2000, 6750, '2/7/15/30', 'yes', '../images/technophilerentalimages/punk.jpg'),
-(3, 'Monster Clarity Hd', 2, 400, 3000, 8750, '2/7/15/30', 'yes', '../images/technophilerentalimages/monster2.jpg'),
-(4, 'Bose L1 compact', 1, 700, 5000, 86540, '2/7/15/30', 'yes', '../images/technophilerentalimages/bose.jpg'),
-(5, 'Marshall Kilburn', 3, 700, 4000, 37000, '2/7/15/30', 'no', '../images/technophilerentalimages/marshall.jpg'),
-(7, 'Beoplay', 1, 600, 2500, 10000, '2/7/15/30', 'yes', '../images/technophilerentalimages/bo.jpg'),
-(15, 'Beats By Dr.Dre Mixr Headphone', 2, 600, 1500, 22080, '2/7/15/30', 'yes', '../images/technophilerentalimages/beats mixr.jpg'),
-(16, 'STK Flasko Splashproof Bluetooth Speaker', 3, 300, 800, 3500, '2/7/15/30', 'yes', '../images/technophilerentalimages/flasko.jpg'),
-(17, 'Monster Blaster Boombox Wireless Speaker', 2, 1500, 6000, 40000, '2/7/15/30', 'yes', '../images/technophilerentalimages/monster.jpg');
+(1, 'Ultimate Ears Roll 2', 1, 450, 2000, 8500, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/ue roll 22.jpg'),
+(2, 'Sol Punk', 3, 500, 2000, 6750, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/punk.jpg'),
+(3, 'Monster Clarity Hd', 2, 400, 3000, 8750, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/monster2.jpg'),
+(4, 'Bose L1 compact', 1, 700, 5000, 86540, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/bose.jpg'),
+(5, 'Marshall Kilburn', 3, 700, 4000, 37000, '2/7/15/30', 'no', '../html1/img/technophilerentalimages/marshall.jpg'),
+(7, 'Beoplay', 1, 600, 2500, 10000, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/bo.jpg'),
+(15, 'Beats By Dr.Dre Mixr Headphone', 2, 600, 1500, 22080, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/beats mixr.jpg'),
+(16, 'STK Flasko Splashproof Bluetooth Speaker', 3, 300, 800, 3500, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/flasko.jpg'),
+(17, 'Monster Blaster Boombox Wireless Speaker', 2, 1500, 6000, 40000, '2/7/15/30', 'yes', '../html1/img/technophilerentalimages/monster.jpg');
 
 -- --------------------------------------------------------
 
