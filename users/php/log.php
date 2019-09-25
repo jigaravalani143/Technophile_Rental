@@ -12,7 +12,7 @@
 
 				$_SESSION["user"]=$email;
 
-				header('Location:homepage1.php');
+				header('Location:homepage.php');
 			}else{
 				$_SESSION["passwordSuccess"]="false";
 				header('Location:signup.php');

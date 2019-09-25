@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$totamount=$_SESSION["amount"];
-	
+
 ?>
 
 
@@ -44,19 +44,19 @@
 </head>
 
 <body>
- 
+
 	<form action="https://digipaym.000webhostapp.com/LoginPage.php" method="POST">
 
 <!-- Amount: -->
-<input type="hidden" name="a<div class="top-bar">
-        
-      
+<input type="hidden" name="amount" value="<?php echo $totamount; ?>">
+
+
 
 <!-- Merchant Username: -->
 <input type="hidden" name="merchant" value="technophilerentall@gmail.com"> <br>
 
 <!-- Merchant AccNo: -->
-<input type="hidden" name="acc_no" value="2852519309681163  "> <br>
+<input type="hidden" name="acc_no" value="2852519309681163"> <br>
 
 
 	 <div id="content">
@@ -97,7 +97,7 @@
                         echo"<i class='fa fa-rupee'><b>0.00</b></th>";
                       }echo "
                       </tr>
-                      
+
                       <tr class='total'>
                         <td>Total</td>
                         <th><i class='fa fa-rupee'><b>".$totamount."</b></i></th>
@@ -106,7 +106,7 @@
                   </table>";
 
                   ?>
-                  
+
                 </div>
               </div>
 
@@ -130,13 +130,13 @@
             <!-- <div class="col-lg-2">
 
             </div> -->
-            
+
 </div>
 
           </div>
         </div>
-      
-	
+
+
 
 
 
@@ -144,5 +144,3 @@
 
 </body>
 </html>
-
-

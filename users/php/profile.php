@@ -1,3 +1,4 @@
+
 <?php
   session_start();
   if(!isset($_SESSION["user"])){
@@ -31,27 +32,20 @@
     <link rel="stylesheet" href="../html1/css/custom.css">
     <link rel="stylesheet" type="text/css" href="search.css">
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="../html1/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="../html1/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../html1/img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../html1/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../html1/img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../html1/img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../html1/img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../html1/img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../html1/img/apple-touch-icon-152x152.png">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-    <!-- footer css -->
+    <link rel="shortcut icon" href="../html1/img/technophilerentalimages/favicon.ico" type="image/x-icon">
+
         <link rel="stylesheet" type="text/css" href="../css/footer.css">
-        <!-- <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif] -->
-        <!--Search bar-->
+
   <link rel="stylesheet" type="text/css" href="../css/searchbar.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
 
-        <link rel="stylesheet" type="text/css" href="../css/profile.css">
+
+
+  <link rel="stylesheet" href="./css/profile.css">
+  <!------ Include the above in your HEAD tag ---------->
+
 
   </head>
   <body>
@@ -64,13 +58,13 @@
           <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
           <div id="navigation" class="navbar-collapse collapse">
             <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item dropdown active"><a href="homepage1.php">Home <b class="caret"></b></a>
+              <li class="nav-item dropdown active"><a href="homepage.php">Home <b class="caret"></b></a>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Sellers<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
-                      <div class="col-lg-6"><img src="../html1/img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>
+                      <div class="col-lg-6"><img src="../html1/img/BestSeller1.png" alt="" class="img-fluid d-none d-lg-block"></div>
                       <div class="col-lg-3 col-md-6">
                         <h5>Best Sellers</h5>
                         <ul class="list-unstyled mb-3">
@@ -80,6 +74,7 @@
                           <li class="nav-item"><a href="karoke.php" class="nav-link">karoke</a></li>
                           <li class="nav-item"><a href="karoke.php" class="nav-link">Remote control</a></li>
                           <li class="nav-item"><a href="board.php" class="nav-link">Board Games</a></li>
+                          <li class="nav-item"><a href="camera.php" class="nav-link">Camera's</a></li>
                         </ul>
                       </div>
                     </div>
@@ -100,7 +95,7 @@
                 <ul class="dropdown-menu megamenu">
                   <li>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="Profile.php" class="nav-link">Profile</a></li>
+                          <li class="nav-item"><a href="profile.php" class="nav-link">Profile</a></li>
                           <li class="nav-item"><a href="showcart.php" class="nav-link">Your Cart
                                               <i class="fa fa-shopping-cart" style="font-size:24px;color:white;">
                                                  <?php
@@ -136,113 +131,120 @@
 
                </i>
              </a>
-
               </li>
               <!-- ========== Contact dropdown ==================-->
               <li class="nav-item dropdown"><a href="contactus.php">Contact Us <b class="caret"></b></a>
               </li>
-              <!-- ========== Contact dropdown end ==================-->
+
             </ul>
 
           </div>
 
 
+      <!-- Navbar End-->
       <div class="row">
         <div class="col-lg-8">
       <header class="nav-holder make-sticky">
-</header>
+
           </div>
         </div>
-</header>
+      </header>
       <!-- Navbar End-->
 
+<div id="content">
+  <div class="container">
+    <div class="row bar">
+        	<div class="col-md-12">
 
-      <div id="content">
-      <!--  <div class="container">
-          <div class="row bar">
-            <div class="col-md-3">-->
-       <div class="container">
-      	<div class="row bar">
-      		<div class="col-lg-12 col-sm-20">
+            <div class="panel panel-default">
+      			<div class="panel-body">
+                    		<div class="row">
+                              <div class="col-xs-24 col-sm-8">
+                                  <h2>Mike Anamendolla</h2>
+                                  <p><strong>About: </strong> Web Designer / UI. </p>
+                                  <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
+                                  <p><strong>Skills: </strong>
+                                      <span class="label label-info tags">html5</span>
+                                      <span class="label label-info tags">css3</span>
+                                      <span class="label label-info tags">jquery</span>
+                                      <span class="label label-info tags">bootstrap3</span>
+                                  </p>
+                              </div><!--/col-->
+                              <div class="col-xs-12 col-sm-4 text-center">
+                                      <img src="http://api.randomuser.me/portraits/men/49.jpg" alt="" class="center-block img-circle img-responsive">
+                                      <!-- <ul class="list-inline ratings text-center" title="Ratings">
+                                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                                      </ul> -->
+                              </div><!--/col-->
 
-                  <div class="card hovercard"  style="color:#4fbfa8">
-                      <div class="cardheader" style="color:#4fbfa8">
-
-                      </div>
-                      <div class="avatar">
-                          <img alt="" src="profile.png">
-                      </div>
-                      <div class="info">
-                          <div class="title">
-                              <a target="_blank" href="">Technophile</a>
-                          </div>
-                          <div class="desc">Passionate designer</div>
-                          <div class="desc">Curious developer</div>
-                          <div class="desc">Tech geek</div>
-                      </div>
-                      <div class="bottom">
-                          <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                              <i class="fa fa-twitter"></i>
-                          </a>
-                          <a class="btn btn-danger btn-sm" rel="publisher"
-                             href="https://plus.google.com/+ahmshahnuralam">
-                              <i class="fa fa-google-plus"></i>
-                          </a>
-                          <a class="btn btn-primary btn-sm" rel="publisher"
-                             href="https://plus.google.com/shahnuralam">
-                              <i class="fa fa-facebook"></i>
-                          </a>
-                          <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                              <i class="fa fa-behance"></i>
-                          </a>
-                      </div>
-                  </div>
-
-              </div>
-
-      	</div>
-      </div>
-    </div>
+                              <div class="col-xs-12 col-sm-4">
+                                  <h2><strong> 20,7K </strong></h2>
+                                  <p><small>Followers</small></p>
+                                  <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+                              </div><!--/col-->
+                              <div class="col-xs-12 col-sm-4">
+                                  <h2><strong>245</strong></h2>
+                                  <p><small>Following</small></p>
+                                  <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+                              </div><!--/col-->
+                              <div class="col-xs-12 col-sm-4">
+                                  <h2><strong>43</strong></h2>
+                                  <p><small>Snippets</small></p>
+                                  <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>
+                              </div><!--/col-->
+                    		</div><!--/row-->
+                    </div><!--/panel-body-->
+                </div><!--/panel-->
 
 
-
-            <!-- FOOTER -->
-              <footer class="site-footer">
-
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                      <p class="copyright-text" style="color:white">Developed with
-                   <a href="#" style="color:white"><i class="fa fa-heart"> by Technophile</i></a>.
-                      </p>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-          </footer>
-            <!-- FOOTER -->
 
           </div>
-          <!-- Javascript files-->
-          <script src="../html1/vendor/jquery/jquery.min.js"></script>
-          <script src="../html1/vendor/popper.js/umd/popper.min.js"> </script>
-          <script src="../html1/vendor/bootstrap/js/bootstrap.min.js"></script>
-          <script src="../html1/vendor/jquery.cookie/jquery.cookie.js"> </script>
-          <script src="../html1/vendor/waypoints/lib/jquery.waypoints.min.js"> </script>
-          <script src="../html1/vendor/jquery.counterup/jquery.counterup.min.js"> </script>
-          <script src="../html1/vendor/owl.carousel/owl.carousel.min.js"></script>
-          <script src="../html1/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
-          <script src="../html1/js/jquery.parallax-1.1.3.js"></script>
-          <script src="../html1/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-          <script src="../html1/vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>
-          <script src="../html1/js/front.js"></script>
-        </body>
-      </html>
+        </div>
+      </div>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text" style="color:white">Developed with
+       <a href="#" style="color:white"><i class="fa fa-heart"> by Technophile</i></a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+<!-- FOOTER -->
+
+</div>
+<!-- Javascript files-->
+<script src="../html1/vendor/jquery/jquery.min.js"></script>
+<script src="../html1/vendor/popper.js/umd/popper.min.js"> </script>
+<script src="../html1/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../html1/vendor/jquery.cookie/jquery.cookie.js"> </script>
+<script src="../html1/vendor/waypoints/lib/jquery.waypoints.min.js"> </script>
+<script src="../html1/vendor/jquery.counterup/jquery.counterup.min.js"> </script>
+<script src="../html1/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="../html1/vendor/owl.carousel2.thumbs/owl.carousel2.thumbs.min.js"></script>
+<script src="../html1/js/jquery.parallax-1.1.3.js"></script>
+<script src="../html1/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="../html1/vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>
+<script src="../html1/js/front.js"></script>
+</body>
+</html>

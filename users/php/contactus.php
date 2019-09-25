@@ -86,17 +86,17 @@
 	<!-- Navbar Start-->
 	<header class="nav-holder make-sticky">
 		<div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-			<div class="container"><a href="../TechnophileRental/php/homepage1.php" class="navbar-brand home"><img src="../php/logo.jpg" alt="logo" class="d-none d-md-inline-block"><img src="logo.jpg" alt="logo" class="d-inline-block d-md-none"><span class="sr-only">Technophile - go to homepage</span></a>
+			<div class="container"><a href="../TechnophileRental/php/homepage.php" class="navbar-brand home"><img src="../php/logo.jpg" alt="logo" class="d-none d-md-inline-block"><img src="logo.jpg" alt="logo" class="d-inline-block d-md-none"><span class="sr-only">Technophile - go to homepage</span></a>
 				<button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
 				<div id="navigation" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav ml-auto">
-						<li class="nav-item dropdown active"><a href="homepage1.php">Home <b class="caret"></b></a>
+						<li class="nav-item dropdown active"><a href="homepage.php">Home <b class="caret"></b></a>
 						</li>
-						<li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features<b class="caret"></b></a>
+						<li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Seller<b class="caret"></b></a>
 							<ul class="dropdown-menu megamenu">
 								<li>
 									<div class="row">
-										<div class="col-lg-6"><img src="../html1/img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>
+										<div class="col-lg-6"><img src="../html1/img/BestSeller1.png" alt="" class="img-fluid d-none d-lg-block"></div>
 										<div class="col-lg-3 col-md-6">
 											<h5>Best Sellers</h5>
 											<ul class="list-unstyled mb-3">
@@ -126,7 +126,7 @@
 							<ul class="dropdown-menu megamenu">
 								<li>
 											<ul class="list-unstyled mb-3">
-												<li class="nav-item"><a href="Profile.php" class="nav-link">Profile</a></li>
+												<li class="nav-item"><a href="../profile-master/profile.php" class="nav-link">Profile</a></li>
 												<li class="nav-item"><a href="showcart.php" class="nav-link">Your Cart
 																						<i class="fa fa-shopping-cart" style="font-size:24px;color:white;">
 																							 <?php
@@ -180,33 +180,6 @@
 
 				</div>
 
-
-		<!-- Navbar End-->
-		<!-- <div class="row">
-			<div class="col-lg-8">
-		<header class="nav-holder make-sticky"> -->
-			<!-- <div id="navbar" role="navigation" class="navbar navbar-expand-lg" style="position:fixed;width:100%";>
-				<div class="container"><a href="../html1/index.html" class="navbar-brand home"><a href="homepag1.php" class="navbar-brand home"><img src="../html1/img/technophilerentalimages/logo.jpg" class="d-none d-md-inline-block" width="110" height="75"><img src="../html1/img/technophilerentalimages/logo.jpg" class="d-inline-block d-md-none" width="110" height="75"></a>
-					<button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
-					<div id="navigation" class="navbar-collapse collapse">
-					</div>
-					</div>
-
-
-					</div> -->
-					<!-- <div id="search" class="collapse clearfix">
-						<form role="search" class="navbar-form">
-							<div class="input-group">
-								<input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
-									<button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
-							</div>
-						</form>
-					</div> -->
-<!--
-	<div class="searchbar">
-		<input class="search_input" type="text" name="" placeholder="Search...">
-		<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-	</div>  -->
 				</div>
 			</div>
 		</header>

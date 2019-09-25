@@ -1,9 +1,16 @@
+<?php
+  session_start();
+  if(!isset($_SESSION["user"])){
+    header('Location:signup.php');
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Universal - All In 1 Template</title>
+    <title>TechnophileRental</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -22,139 +29,135 @@
     <link rel="stylesheet" href="../html1/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="../html1/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="search.css">
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="../html1/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="../html1/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="../html1/img/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../html1/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../html1/img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../html1/img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../html1/img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../html1/img/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../html1/img/apple-touch-icon-152x152.png">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link rel="shortcut icon" href="../html1/img/technophilerentalimages/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" type="text/css" href="../css/footer.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/searchbar.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   </head>
   <body>
-    <div id="all">
-      <!-- Top bar-->
 
-      <!-- Top bar end-->
-      <!-- Login Modal-->
-      <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true" class="modal fade">
-        <div role="document" class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 id="login-modalLabel" class="modal-title">Customer Login</h4>
-              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-            </div>
-            <div class="modal-body">
-              <form action="customer-orders.html" method="post">
-                <div class="form-group">
-                  <input id="email_modal" type="text" placeholder="email" class="form-control">
-                </div>
-                <div class="form-group">
-                  <input id="password_modal" type="password" placeholder="password" class="form-control">
-                </div>
-                <p class="text-center">
-                  <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
-                </p>
-              </form>
-              <p class="text-center text-muted">Not registered yet?</p>
-              <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
-            </div>
+    <div id="all">
+    <!-- Navbar Start-->
+    <header class="nav-holder make-sticky">
+      <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+        <div class="container"><a href="homepage1.php" class="navbar-brand home"><img src="logo.jpg" alt="logo" class="d-none d-md-inline-block"><img src="logo.jpg" alt="logo" class="d-inline-block d-md-none"><span class="sr-only">Technophile - go to homepage</span></a>
+          <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
+          <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item dropdown active"><a href="homepage.php">Home <b class="caret"></b></a>
+              </li>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Sellers<b class="caret"></b></a>
+                <ul class="dropdown-menu megamenu">
+                  <li>
+                    <div class="row">
+                      <div class="col-lg-6"><img src="../html1/img/BestSeller1.png" alt="" class="img-fluid d-none d-lg-block"></div>
+                      <div class="col-lg-3 col-md-6">
+                        <h5>Best Sellers</h5>
+                        <ul class="list-unstyled mb-3">
+                          <li class="nav-item"><a href="speaker.php" class="nav-link">Speaker</a></li>
+                          <li class="nav-item"><a href="hoverboard.php" class="nav-link">Hoverboards and Drones</a></li>
+                          <li class="nav-item"><a href="playstation.php" class="nav-link">PlayStation</a></li>
+                          <li class="nav-item"><a href="karoke.php" class="nav-link">karoke</a></li>
+                          <li class="nav-item"><a href="karoke.php" class="nav-link">Remote control</a></li>
+                          <li class="nav-item"><a href="board.php" class="nav-link">Board Games</a></li>
+                          <li class="nav-item"><a href="camera.php" class="nav-link">Camera's</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                    <?php
+                              if(isset($_SESSION["user"])){
+                                echo "<div class='d-flex justify-content-md-end justify-content-between'>Hello, " .$_SESSION['user']."</div>";
+
+                                }else{
+                                echo "<div class='d-flex justify-content-md-end justify-content-between'>Login </div>";
+                              }
+                            ?>
+ <b class="caret"></b></a>
+                <ul class="dropdown-menu megamenu">
+                  <li>
+                        <ul class="list-unstyled mb-3">
+                          <li class="nav-item"><a href="../profile-master/profile.php" class="nav-link">Profile</a></li>
+                          <li class="nav-item"><a href="showcart.php" class="nav-link">Your Cart
+                                              <i class="fa fa-shopping-cart" style="font-size:24px;color:white;">
+                                                 <?php
+                                                  include 'countcart.php';
+                                                  echo "<span class='badge' style='background-color:#6394F8;border-radius:10px;font-size:12px;padding:3px 7px;'>".$count."</span>";
+                                                ?>
+
+                                            </i></a>
+                                          </li>
+                          <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+                        </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
+                <ul class="dropdown-menu megamenu">
+                  <li>
+                        <ul class="list-unstyled mb-3">
+                          <li class="nav-item"><a href="signup.php" class="nav-link">Sign Up</a></li>
+                          <li class="nav-item"><a href="signup.php" class="nav-link">Sign In</a></li>
+                        </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown menu-large">
+                <a href="showcart.php">
+                 <i class="fa fa-shopping-cart" style="font-size:24px;color:black;">
+
+                      <?php
+                     include 'countcart.php';
+                     echo "<span class='badge' style='background-color:#6394F8;border-radius:10px;font-size:12px;padding:3px 7px;'>".$count."</span>";
+                   ?>
+
+               </i>
+             </a>
+              </li>
+              <!-- ========== Contact dropdown ==================-->
+              <li class="nav-item dropdown"><a href="contactus.php">Contact Us <b class="caret"></b></a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+      <!-- Navbar End-->
+      <div class="row">
+        <div class="col-lg-8">
+      <header class="nav-holder make-sticky">
+
           </div>
         </div>
-      </div>
-      <!-- Login modal end-->
-      <!-- Navbar Start-->
-      <header class="nav-holder make-sticky">
-        <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
-          <div class="container"><a href="../html1/index.html" class="navbar-brand home"><img src="../html1/img/logo.png" alt="Universal logo" class="d-none d-md-inline-block"><img src="../html1/img/logo-small.png" alt="Universal logo" class="d-inline-block d-md-none"><span class="sr-only">Universal - go to homepage</span></a>
-            <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined"><span class="sr-only">Toggle navigation</span><i class="fa fa-align-justify"></i></button>
-            <div id="navigation" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item dropdown active"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Home <b class="caret"></b></a>
-                  <!-- <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a href="index.html" class="nav-link">Option 1: Default Page</a></li>
-                    <li class="dropdown-item"><a href="index2.html" class="nav-link">Option 2: Application</a></li>
-                    <li class="dropdown-item"><a href="index3.html" class="nav-link">Option 3: Startup</a></li>
-                    <li class="dropdown-item"><a href="index4.html" class="nav-link">Option 4: Agency</a></li>
-                    <li class="dropdown-item"><a href="index5.html" class="nav-link">Option 5: Portfolio</a></li>
-                  </ul> -->
-                </li>
-                <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features<b class="caret"></b></a>
-                  <ul class="dropdown-menu megamenu">
-                    <li>
-                      <div class="row">
-                        <div class="col-lg-6"><img src="../html1/img/template-easy-customize.png" alt="" class="img-fluid d-none d-lg-block"></div>
-                        <div class="col-lg-3 col-md-6">
-                          <h5>Shortcodes</h5>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-accordions.html" class="nav-link">Accordions</a></li>
-                            <li class="nav-item"><a href="template-alerts.html" class="nav-link">Alerts</a></li>
-                            <li class="nav-item"><a href="template-buttons.html" class="nav-link">Buttons</a></li>
-                            <li class="nav-item"><a href="template-content-boxes.html" class="nav-link">Content boxes</a></li>
-                            <li class="nav-item"><a href="template-blocks.html" class="nav-link">Horizontal blocks</a></li>
-                            <li class="nav-item"><a href="template-pagination.html" class="nav-link">Pagination</a></li>
-                            <li class="nav-item"><a href="template-tabs.html" class="nav-link">Tabs</a></li>
-                            <li class="nav-item"><a href="template-typography.html" class="nav-link">Typography</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                          <h5>Header variations</h5>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="template-header-default.html" class="nav-link">Default sticky header</a></li>
-                            <li class="nav-item"><a href="template-header-nosticky.html" class="nav-link">No sticky header</a></li>
-                            <li class="nav-item"><a href="template-header-light.html" class="nav-link">Light header</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Shop <b class="caret"></b></a>
-                  <ul class="dropdown-menu megamenu">
-                    <li>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="portfolio-2.html" class="nav-link">Cart</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-2.html" class="nav-link">Your Orders</a></li>
-                            <li class="nav-item"><a href="portfolio-3.html" class="nav-link">Speacial Deals</a></li>
-                          </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Login <b class="caret"></b></a>
-                  <ul class="dropdown-menu megamenu">
-                    <li>
-                          <ul class="list-unstyled mb-3">
-                            <li class="nav-item"><a href="portfolio-2.html" class="nav-link">Profile</a></li>
-                            <li class="nav-item"><a href="portfolio-no-space-2.html" class="nav-link">Tour Cart</a></li>
-                            <li class="nav-item"><a href="portfolio-3.html" class="nav-link">Logout</a></li>
-                          </ul>
-                    </li>
-                  </ul>
-                </li>
+      </header>
 
-                <!-- ========== Contact dropdown ==================-->
-                <li class="nav-item dropdown"><a href="javascript: void(0)" data-toggle="dropdown" class="dropdown-toggle">Contact Us <b class="caret"></b></a>
-                </li>
-                <!-- ========== Contact dropdown end ==================-->
-              </ul>
-            </div>
-            <div id="search" class="collapse clearfix">
-              <form role="search" class="navbar-form">
-                <div class="input-group">
-                  <input type="text" placeholder="Search" class="form-control"><span class="input-group-btn">
-                    <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button></span>
-                </div>
-              </form>
-            </div>
+
           </div>
         </div>
       </header>
       <!-- Navbar End-->
+     <form action="search1.php" method="post">
+
+      <div class="container h-100">
+      <div class="d-flex justify-content-end h-100">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="search" placeholder="Search...">
+        <a href="search1.php" class="search_icon"><i class="fa fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+    </form>
+
 
 
       <div id="content">
@@ -168,249 +171,151 @@
                 </div>
                 <div class="panel-body">
                   <ul class="nav nav-pills flex-column text-sm category-menu">
-                    <li class="nav-item"><a href="shop-category.html" class="nav-link d-flex align-items-center justify-content-between"><span>Men </span><span class="badge badge-secondary">42</span></a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">T-shirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Shirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Pants</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Accessories</a></li>
-                      </ul>
+                    <li class="nav-item"><a href="homepage1.php" class="nav-link active d-flex align-items-center justify-content-between"><span>Best Sellers </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from product_catalogue";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+
                     </li>
-                    <li class="nav-item"><a href="shop-category.html" class="nav-link active d-flex align-items-center justify-content-between"><span>Ladies  </span><span class="badge badge-light">123</span></a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">T-shirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Skirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Pants</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Accessories</a></li>
-                      </ul>
+                    <li class="nav-item"><a href="speaker.php" class="nav-link d-flex align-items-center justify-content-between"><span>Speakers </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from speaker";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
                     </li>
-                    <li class="nav-item"><a href="shop-category.html" class="nav-link d-flex align-items-center justify-content-between"><span>Kids  </span><span class="badge badge-secondary">11</span></a>
-                      <ul class="nav nav-pills flex-column">
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">T-shirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Skirts</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Pants</a></li>
-                        <li class="nav-item"><a href="shop-category.html" class="nav-link">Accessories</a></li>
-                      </ul>
+                    <li class="nav-item"><a href="hoverboard.php" class="nav-link d-flex align-items-center justify-content-between"><span>Hoverboards and Drones </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from hoveranddrone";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+                    </li>
+                    <li class="nav-item"><a href="playstation.php" class="nav-link d-flex align-items-center justify-content-between"><span>PlayStation </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from playstation";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+                    </li>
+                    <li class="nav-item"><a href="karoke.php" class="nav-link d-flex align-items-center justify-content-between"><span>Karaoke and remote controls </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from karoke";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+                    </li>
+                    <li class="nav-item"><a href="board.php" class="nav-link d-flex align-items-center justify-content-between"><span>Board Games  </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from boardgames";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
+                    </li>
+                     <li class="nav-item"><a href="camera.php" class="nav-link d-flex align-items-center justify-content-between"><span>Camera's </span><?php
+                        include 'databaseconnection.php';
+                        $sql="Select * from camera";
+                        $result=mysqli_query($conn,$sql);
+                        $count=mysqli_num_rows($result);
+                        echo "<span class='badge badge-light'>$count</span>";
+
+                    ?></a>
+
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div class="panel panel-default sidebar-menu">
-                <div class="panel-heading d-flex align-items-center justify-content-between">
-                  <h3 class="h4 panel-title">Brands</h3><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i><span class="d-none d-md-inline-block">Clear</span></a>
-                </div>
-                <div class="panel-body">
-                  <form>
-                    <div class="form-group">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Armani  (10)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Versace  (12)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Carlo Bruni  (15)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Jack Honey  (14)
-                        </label>
-                      </div>
-                    </div>
-                    <button class="btn btn-sm btn-template-outlined"><i class="fa fa-pencil"></i> Apply</button>
-                  </form>
-                </div>
-              </div>
-              <div class="panel panel-default sidebar-menu">
-                <div class="panel-heading d-flex align-items-center justify-content-between">
-                  <h3 class="h4 panel-titlen">Colours</h3><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times-circle"></i><span class="d-none d-md-inline-block">Clear</span></a>
-                </div>
-                <div class="panel-body">
-                  <form>
-                    <div class="form-group">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"><span class="colour white"></span> White (14)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"><span class="colour blue"></span> Blue (10)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"><span class="colour green"></span>  Green (20)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"><span class="colour yellow"></span>  Yellow (13)
-                        </label>
-                      </div>
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"><span class="colour red"></span>  Red (10)
-                        </label>
-                      </div>
-                    </div>
-                    <button class="btn btn-sm btn-template-outlined"><i class="fa fa-pencil"></i> Apply</button>
-                  </form>
                 </div>
               </div>
 
             </div>
             <div class="col-md-9">
-              <p class="text-muted lead">In our Speakers department we offer wide selection of the best products we have found and carefully selected worldwide.</p>
+              <p class="text-muted lead">Some of our best selling products!</p>
               <div class="row products products-big">
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
+
 
                       <?php
                         include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=1";
+
+                        $sql="Select Pid,Image,Name,Perday from product_catalogue";
                         $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
 
 
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row["Description"]."'</a></h3>
-                                      <p class='price'>$143.00</p>
+
+                        while($row=mysqli_fetch_assoc($result)){
+                        echo "<div class='col-lg-4 col-md-6'>
+                                  <div class='product'>
+                                            <div class='image'><a href='display.php?Pid=".$row['Pid']."&test=1'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>
+
+                                          <h3 class='h5'><a href='display.php?Pid=".$row['Pid']."&test=1'>".$row["Name"]."'</a></h3>
+
+
+
+
+                                      <div class='text'>
+
+                                          <p class='price'>Perday rent: <i class='fa fa-rupee'><b>".$row["Perday"]."</b></i></p>
+                                      </div>
+                                  </div>
                               </div>";
+
+
+
+
+                            }
                       ?>
-
-
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <?php
-                        include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=2";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
-
-
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row['Description']."'</a></h3>
-                                      <p class='price'>$143.00</p>
-                              </div>";
-                      ?>
-                    <div class="ribbon-holder">
-                      <div class="ribbon sale">SALE</div>
-                      <div class="ribbon new">NEW</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <?php
-                        include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=3";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
-
-
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row["Description"]."'</a></h3>
-                                      <p class='price'>$143.00</p>
-                              </div>";
-                      ?>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <?php
-                        include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=4";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
-
-
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row["Description"]."'</a></h3>
-                                      <p class='price'>$143.00</p>
-                              </div>";
-                      ?>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                      <?php
-                        include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=5";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
-
-
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row["Description"]."'</a></h3>
-                                      <p class='price'>$143.00</p>
-                              </div>";
-                      ?>
-                    <div class="ribbon-holder">
-                      <div class="ribbon sale">SALE</div>
-                      <div class="ribbon new">NEW</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="product">
-                    <?php
-                        include 'databaseconnection.php';
-                        $sql="Select Description,Image from product_catalogue where Pid=6";
-                        $result=mysqli_query($conn,$sql);
-                        $row=mysqli_fetch_assoc($result);
-                        echo "<div class='image'><a href='shop-detail.html'><img src='".$row['Image']."' alt='Cannot display image' class='img-fluid image1'></a></div>";
-
-
-                       echo "<div class='text'>
-                                      <h3 class='h5'><a href='shop-detail.html'>'".$row["Description"]."'</a></h3>
-                                      <p class='price'>$143.00</p>
-                              </div>";
-                      ?>
-                    <div class="ribbon-holder">
-                      <div class="ribbon new">NEW</div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
-              <div class="pages">
-                <p class="loadMore text-center"><a href="#" class="btn btn-template-outlined"><i class="fa fa-chevron-down"></i> Load more</a></p>
-                <nav aria-label="Page navigation example" class="d-flex justify-content-center">
-                  <ul class="pagination">
-                    <li class="page-item"><a href="#" class="page-link"> <i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+                          </div>
           </div>
         </div>
       </div>
       <!-- GET IT-->
 
+
+      <!-- FOOTER -->
+        <footer class="site-footer">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text" style="color:white">Developed with
+             <a href="#" style="color:white"><i class="fa fa-heart"> by Technophile</i></a>.
+                </p>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </footer>
       <!-- FOOTER -->
 
-    </div>
+</div>
     <!-- Javascript files-->
     <script src="../html1/vendor/jquery/jquery.min.js"></script>
     <script src="../html1/vendor/popper.js/umd/popper.min.js"> </script>
