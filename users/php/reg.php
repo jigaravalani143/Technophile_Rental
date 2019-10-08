@@ -11,8 +11,10 @@
 	$result=mysqli_query($conn,$sql1);
 	if(mysqli_num_rows($result)>0){
 		$_SESSION["userExists"]="true";
-		header('Location:signup.php');
+		//header('Location:signup.php');
 		//echo "User already exists with email:<b> ".$email."</b>";
+
+		echo "User Exists";
 
 	}else{
 		$sql="Insert into signup(email,password,name,address,phone,lname) values('$email','".md5($password)."','$first','$address',$phone,'$last')";
@@ -22,12 +24,17 @@
 		if($result){
 		$_SESSION["user"]=$email;
 
-		header('Location:homepage.php');
+//		header('Location:homepage.php');
+
+		echo "Success";
+
 		}else{
-			echo mysqli_error($conn);
+			// echo mysqli_error($conn);
+			echo "Error";
 		}
 	}else{
 		echo mysqli_error($conn);
+		echo "Error";
 	}
 }
 ?>
