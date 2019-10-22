@@ -72,7 +72,7 @@
 	            <ul class="nav navbar-nav ml-auto">
 	              <li class="nav-item dropdown active"><a href="../php/homepage.php">Home <b class="caret"></b></a>
 	              </li>
-	              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Sellers<b class="caret"></b></a>
+	              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories<b class="caret"></b></a>
 	                <ul class="dropdown-menu megamenu">
 	                  <li>
 	                    <div class="row">
@@ -122,7 +122,7 @@
 	                  </li>
 	                </ul>
 	              </li>
-	              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
+	              <!-- <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
 	                <ul class="dropdown-menu megamenu">
 	                  <li>
 	                        <ul class="list-unstyled mb-3">
@@ -131,13 +131,13 @@
 	                        </ul>
 	                  </li>
 	                </ul>
-	              </li>
+	              </li> -->
 	              <li class="nav-item dropdown menu-large">
 	                <a href="../php/showcart.php">
 	                 <i class="fa fa-shopping-cart" style="font-size:24px;color:black;">
 
 	                      <?php
-	                     include 'C:/xampp/htdocs/TechnophileRental/users/php/countcart.php';
+	                     include '../php/countcart.php';
 	                     echo "<span class='badge' style='background-color:#6394F8;border-radius:10px;font-size:12px;padding:3px 7px;'>".$count."</span>";
 	                   ?>
 
@@ -179,8 +179,26 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" style="background: url(images/user-3.jpg);"></div>
-							<h1><span>Jigar AValani</span></h1>
-							<h3><span>Web Developer / Photographer</span></h3>
+							<p><?php
+				        include '../php/databaseconnection.php';
+                    if(isset($_SESSION["user"])){
+                    $email = $_SESSION['user'];
+										// $user = $_GET["user"];
+										// echo $user;
+
+				            $sql="select * from signup where email='".$email."'";
+
+				            $result=mysqli_query($conn,$sql);
+				            if(mysqli_num_rows($result)>0){
+				              while($row=mysqli_fetch_assoc($result)){
+												echo "<h1><span>".$row["name"]." ".$row["lname"]."</span></h1>";
+				                echo "<h3><span>".$row["email"]."</span></h3>";
+												echo "<h3><span>".$row["phone"]."</span></h3>";
+												echo "<h3><span>".$row["address"]."</span></h3>";
+				              }
+				            }
+}
+				      ?></p>
 							<p>
 								<ul class="fh5co-social-icons">
 									<li><a href="#"><i class="icon-twitter2"></i></a></li>

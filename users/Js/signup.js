@@ -15,7 +15,7 @@ $(document).ready(function(){
                 $('#validationMsg').show();
                 $('#displayMessage').text(data);
             }else{
-                window.location.href="homepag1.php";
+                window.location.href="homepage.php";
             }
         });
     })

@@ -51,7 +51,7 @@
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item dropdown active"><a href="homepage.php">Home <b class="caret"></b></a>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Sellers<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
@@ -101,7 +101,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
+              <!-- <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                         <ul class="list-unstyled mb-3">
@@ -110,7 +110,7 @@
                         </ul>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <li class="nav-item dropdown menu-large">
                 <a href="showcart.php">
                  <i class="fa fa-shopping-cart" style="font-size:24px;color:black;">
@@ -171,7 +171,7 @@
                 </div>
                 <div class="panel-body">
                   <ul class="nav nav-pills flex-column text-sm category-menu">
-                    <li class="nav-item"><a href="homepage1.php" class="nav-link active d-flex align-items-center justify-content-between"><span>Best Sellers </span><?php
+                    <li class="nav-item"><a href="homepage.php" class="nav-link active d-flex align-items-center justify-content-between"><span>Best Sellers </span><?php
                         include 'databaseconnection.php';
                         $sql="Select * from product_catalogue";
                         $result=mysqli_query($conn,$sql);

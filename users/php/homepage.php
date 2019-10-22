@@ -51,7 +51,7 @@
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item dropdown active"><a href="homepage.php">Home <b class="caret"></b></a>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Best Sellers<b class="caret"></b></a>
+              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories<b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                     <div class="row">
@@ -101,7 +101,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
+              <!-- <li class="nav-item dropdown menu-large"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Register <b class="caret"></b></a>
                 <ul class="dropdown-menu megamenu">
                   <li>
                         <ul class="list-unstyled mb-3">
@@ -110,7 +110,7 @@
                         </ul>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <li class="nav-item dropdown menu-large">
                 <a href="showcart.php">
                  <i class="fa fa-shopping-cart" style="font-size:24px;color:black;">
