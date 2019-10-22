@@ -53,10 +53,10 @@
 
 
 <!-- Merchant Username: -->
-<input type="hidden" name="merchant" value="technophilerentall@gmail.com"> <br>
+<input type="hidden" name="merchant" value="techno@merchant.com"> <br>
 
 <!-- Merchant AccNo: -->
-<input type="hidden" name="acc_no" value="2852519309681163"> <br>
+<input type="hidden" name="acc_no" value="2890552294631455"> <br>
 
 
 	 <div id="content">
@@ -118,7 +118,7 @@
                     <div class="col-lg-9">
                   <div class="box-footer d-flex flex-wrap align-items-center justify-content-between">
                     <div class="right-col">
-                      <button type="submit" class="btn btn-template-main" style="margin-left:25px;margin-right:10px;width:160%">Proceed to DigiPay<i class="fa fa-chevron-right" ></i></button>
+                      <button name="submit" type="submit" class="btn btn-template-main" style="margin-left:25px;margin-right:10px;width:160%">Proceed to DigiPay<i class="fa fa-chevron-right" ></i></button>
                     </div>
                   </div>
                 </div>
