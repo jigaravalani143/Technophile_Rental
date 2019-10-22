@@ -75,7 +75,7 @@
               <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-              <form action="log.php" method="post">
+<!--               <form action="log.php" method="post">
                 <div class="form-group">
                   <input id="email_modal" type="text" placeholder="email" class="form-control" name="useremail">
                 </div>
@@ -85,7 +85,7 @@
                 <p class="text-center">
                   <button class="btn btn-template-outlined"><i class="fa fa-sign-in"></i> Log in</button>
                 </p>
-              </form>
+              </form> -->
               <p class="text-center text-muted">Not registered yet?</p>
               <p class="text-center text-muted"><a href="signup.php"><strong>Register now</strong></a>! It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
             </div>
@@ -128,13 +128,12 @@
                 <p>With registration new world of latest products and much more opens to you! The whole process will not take you more than a minute!</p>
                 
                 <hr>
- <!--               <form action="reg.php" method="post"> -->
                   <div class="form-group">
                     <label for="name-login">Fisrt Name</label>
                     <input id="name-login" type="text" class="form-control" name="fname" required>
                   </div>
-					<div class="form-group">
-					<label for="lname-login">Last Name</label>
+        					<div class="form-group">
+        					<label for="lname-login">Last Name</label>
                     <input id="lname-login" type="text" class="form-control" name="lname" required>
                   </div>
                   <div class="form-group">
@@ -146,29 +145,16 @@
                     <input id="password-login" type="password" class="form-control" name="userpassword" required>
                   </div>
                   <div class="form-group">
-					<label for="phone-login">Phone</label>
+					         <label for="phone-login">Phone</label>
                     <input id="phone-login" type="text" class="form-control" name="userphone" required>
                   </div>
                   <div class="form-group">
-					<label for="addres-login">Address</label>
-                    <input id="addres-login" type="text" class="form-control" name="useraddress" required>
+					         <label for="address-login">Address</label>
+                    <input id="address-login" type="text" class="form-control" name="useraddress" required>
                   </div>
                   <div class="text-center">
                     <button id="signup_button" class="btn btn-template-outlined"><i class="fa fa-user-md"></i> Register</button>
                   </div>
- <!--                 <?php
-              
-              //if(isset($_SESSION["userExists"])){
-                
-                
-                // echo "<div class='alert alert-warning' style='margin-top:20px;'>
-                //     <span>User already exists with the given email please log in to continue!</span>
-                //     </div>";
-                //     session_destroy();
-        //      }
-            ?> -->
-
-<!--                </form> -->
 
                     <div class='alert alert-danger alert-dismissible' style='margin-top:20px;display:none;' id="validationSignUpMsg">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

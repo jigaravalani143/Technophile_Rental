@@ -29,6 +29,7 @@ $(document).ready(function(){
         var userphone  = $('#phone-login').val();
         var useraddress = $('#address-login').val();
 
+        console.log("Sending: " + useremail);
        
         $.post("reg.php",{useremail:useremail,
                         userpassword:userpassword,
@@ -38,10 +39,11 @@ $(document).ready(function(){
                         useraddress:useraddress
             },function(data){
                 
+                console.log("Data: " + data);
                 if(data==="User Exists" || data === "Error"){
                     $('#validationSignUpMsg').hide();
                     $('#validationSignUpMsg').show();
-                    $('#displaySignUpMessage').text("Some Error occured, please try later!");
+                    $('#displaySignUpMessage').text(((data==="User Exists") ? "User Already exists" : "Some Error occured, please try later!"));
                 }else{
                     window.location.href="homepage.php";
                 }
